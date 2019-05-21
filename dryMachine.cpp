@@ -7,11 +7,15 @@ dryMachine::dryMachine(int cloth, int time) {
     this->timeLeft = 0;
 }
 
-dryMachine::dryMachine(){}
+dryMachine::dryMachine() = default;
 dryMachine::~dryMachine() = default;
 
 
-
+void dryMachine::check()
+{
+    if(fillingStatus > maxCapacity/2)
+        isWorking = true;
+}
 
 
 

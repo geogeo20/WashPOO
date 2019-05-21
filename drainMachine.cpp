@@ -7,8 +7,12 @@ drainingMachine::drainingMachine(int weight, int time) {
     this->timeLeft = 0;
 }
 
-drainingMachine::drainingMachine() {}
+drainingMachine::drainingMachine() = default;
 drainingMachine::~drainingMachine() = default;
 
 
-
+void drainingMachine::check()
+{
+    if(fillingStatus > maxCapacity/2)
+        isWorking = true;
+}
